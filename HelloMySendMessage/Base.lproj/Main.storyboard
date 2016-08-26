@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9DI-Wg-P5m">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3U-Pm-hNb">
+                                <rect key="frame" x="479" y="58" width="101" height="30"/>
+                                <state key="normal" title="Send Message"/>
+                                <connections>
+                                    <action selector="sendTextBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KpW-ba-gYn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyb-Jq-LGL">
+                                <rect key="frame" x="20" y="58" width="80" height="30"/>
+                                <state key="normal" title="Send Photo"/>
+                                <connections>
+                                    <action selector="sendPhotoBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aqa-NE-OLE"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipR-I7-jaS" customClass="ChattingView">
+                                <rect key="frame" x="0.0" y="96" width="600" height="504"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q3U-Pm-hNb" firstAttribute="top" secondItem="9DI-Wg-P5m" secondAttribute="bottom" constant="8" id="1sl-0l-Kr7"/>
+                            <constraint firstItem="Dyb-Jq-LGL" firstAttribute="top" secondItem="9DI-Wg-P5m" secondAttribute="bottom" constant="8" id="FSY-1r-oGS"/>
+                            <constraint firstItem="ipR-I7-jaS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="FgQ-4l-bzr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ipR-I7-jaS" secondAttribute="bottom" id="Msj-3J-ir3"/>
+                            <constraint firstItem="9DI-Wg-P5m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PGS-fv-W1M"/>
+                            <constraint firstItem="9DI-Wg-P5m" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="PV7-rt-2No"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q3U-Pm-hNb" secondAttribute="trailing" id="hN7-5R-vmm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ipR-I7-jaS" secondAttribute="trailing" constant="-20" id="mcI-0k-5cf"/>
+                            <constraint firstItem="Dyb-Jq-LGL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pNE-qk-lbN"/>
+                            <constraint firstItem="ipR-I7-jaS" firstAttribute="top" secondItem="Dyb-Jq-LGL" secondAttribute="bottom" constant="8" id="xqv-ds-jb8"/>
+                            <constraint firstItem="9DI-Wg-P5m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yRf-X5-4rg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chattingView" destination="ipR-I7-jaS" id="LAx-oB-xet"/>
+                        <outlet property="inputTextField" destination="9DI-Wg-P5m" id="77z-j1-22v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517" y="255"/>
+        </scene>
+    </scenes>
+</document>
